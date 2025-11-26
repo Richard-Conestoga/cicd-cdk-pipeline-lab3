@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies"
+      - pip install -r requirements.txt
+      - npm install -g aws-cdk
+  build:
+    commands:
+      - echo "Running cdk synth"
+      - cdk synth CdkCicdLabStack > cdk-synth-output.yaml
+
+artifacts:
+  files:
+    - cdk-synth-output.yaml
+  discard-paths: yes
