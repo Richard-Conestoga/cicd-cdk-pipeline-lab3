@@ -1,0 +1,26 @@
+{
+  "name": "cicd-cdk-pipeline-lab3",
+  "version": "1.0.0",
+  "description": "This is a blank project for CDK development with Python.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richard-Conestoga/cicd-cdk-pipeline-lab3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richard-Conestoga/cicd-cdk-pipeline-lab3/issues"
+  },
+  "homepage": "https://github.com/Richard-Conestoga/cicd-cdk-pipeline-lab3#readme",
+  "devDependencies": {
+    "aws-cdk": "^2.1033.0"
+  }
+}

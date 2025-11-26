@@ -5,11 +5,11 @@ phases:
     commands:
       - echo "Installing dependencies"
       - pip install -r requirements.txt
-      - npm install -g aws-cdk
+      - npm ci || npm install
   build:
     commands:
-      - echo "Running cdk synth"
-      - cdk synth CdkCicdLabStack > cdk-synth-output.yaml
+      - echo "Running cdk synth with local CLI"
+      - npx aws-cdk synth CdkCicdLabStack > cdk-synth-output.yaml
 
 artifacts:
   files:
