@@ -13,6 +13,7 @@ phases:
     commands:
       - echo "Running CDK synth using Python CDK CLI"
       - cdk synth CicdCdkPipelineLab3Stack > cdk-synth-output.yaml
+      - cdk deploy CicdCdkPipelineLab3Stack --require-approval never
 
 artifacts:
   files:
