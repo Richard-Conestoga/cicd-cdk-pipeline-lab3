@@ -81,8 +81,8 @@ Example layout:
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/Richard-Conestoga/cicd-cdk-pipeline-lab3.git
+cd cicd-cdk-pipeline-lab
 ```
 
 2. Create and activate virtualenv:
