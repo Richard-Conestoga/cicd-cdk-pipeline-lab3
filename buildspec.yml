@@ -6,6 +6,7 @@ phases:
       - echo "Installing Python and Node dependencies"
       - pip install -r requirements.txt
       - npm install
+      - npm install -g aws-cdk
   build:
     commands:
       - echo "Running cdk synth with local Node CLI"
