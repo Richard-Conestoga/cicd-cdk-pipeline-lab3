@@ -14,7 +14,7 @@ def handler(event, context):
         "message": "Hello from CDK Pipeline!",  # changed message
         "time": datetime.utcnow().isoformat() + "Z",
         "stage": os.getenv("STAGE", "dev"),
-        "version": "v3"
+        "version": "v4"
     })
 }
 
