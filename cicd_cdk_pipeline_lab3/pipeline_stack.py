@@ -29,7 +29,8 @@ class PipelineStack(Stack):
             self,
             "CdkSynthProject",
             environment=codebuild.BuildEnvironment(
-                build_image=codebuild.LinuxBuildImage.STANDARD_6_0,
+                build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_5,
+                privileged=False,
             ),
         )
 
