@@ -1,15 +1,19 @@
 version: 0.2
+
 phases:
   install:
+    runtime-versions:
+      python: 3.11
+      nodejs: 20
     commands:
       - echo "Installing Python and Node dependencies"
       - pip install -r requirements.txt
-      - npm install
-      - npm install -g aws-cdk
+      - npm install 
   build:
     commands:
-      - echo "Running cdk synth with global CDK"
+      - echo "Running CDK synth using Python CDK CLI"
       - cdk synth CdkCicdLabStack > cdk-synth-output.yaml
+
 artifacts:
   files:
     - cdk-synth-output.yaml
