@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     commands:
@@ -9,9 +8,8 @@ phases:
       - npm install -g aws-cdk
   build:
     commands:
-      - echo "Running cdk synth with local Node CLI"
-      - npx cdk synth CdkCicdLabStack > cdk-synth-output.yaml
-
+      - echo "Running cdk synth with global CDK"
+      - cdk synth CdkCicdLabStack > cdk-synth-output.yaml
 artifacts:
   files:
     - cdk-synth-output.yaml
