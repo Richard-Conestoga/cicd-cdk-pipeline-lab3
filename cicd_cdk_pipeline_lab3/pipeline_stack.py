@@ -65,4 +65,17 @@ class PipelineStack(Stack):
                 )
             ],
         )
-        # We'll add Deploy stage after Source+Build works
+        
+        # Deploy stage: CloudFormation create/update using synthesized template
+        deploy_stage = pipeline.add_stage(
+            stage_name="Deploy",
+            actions=[
+                cp_actions.CloudFormationCreateUpdateStackAction(
+                    action_name="Deploy_CicdCdkPipelineLab3Stack",
+                    template_path=build_output.at_path("cdk-synth-output.yaml"),
+                    stack_name="CicdCdkPipelineLab3Stack",
+                    admin_permissions=True,
+                )
+            ],
+        )
+
