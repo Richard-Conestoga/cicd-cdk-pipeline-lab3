@@ -3,12 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing Python dependencies (CDK + app)"
+      - echo "Installing Python and Node dependencies"
       - pip install -r requirements.txt
+      - npm install
   build:
     commands:
-      - echo "Running cdk synth via Python CLI"
-      - python -m aws_cdk_cli.cdk synth CdkCicdLabStack > cdk-synth-output.yaml
+      - echo "Running cdk synth with local Node CLI"
+      - npx cdk synth CdkCicdLabStack > cdk-synth-output.yaml
 
 artifacts:
   files:
